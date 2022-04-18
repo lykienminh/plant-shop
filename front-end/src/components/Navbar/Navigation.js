@@ -21,10 +21,7 @@ const Navigation = () => {
                 </Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/">Home</Nav.Link>
-                    <NavDropdown title="Product" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="/product/tree">Interior tree</NavDropdown.Item>
-                        <NavDropdown.Item href="/product/flower">Flower</NavDropdown.Item>
-                    </NavDropdown>
+                    <Nav.Link href="/product">Product</Nav.Link>
                     <Nav.Link href="/contact-us">Services</Nav.Link>
                     <Nav.Link href="/contact-us">About Us</Nav.Link>
                     <Nav.Link href="/contact-us">Contact</Nav.Link>
