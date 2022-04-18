@@ -1,0 +1,41 @@
+.carousel-caption {
+    width: 800px; 
+    top: 50%; 
+    bottom: auto; 
+    text-align: left;
+    -webkit-transform: translate(0, -50%); 
+    -ms-transform: translate(0, -50%); 
+    transform: translate(0, -50%); 
+}
+
+.banner {
+    width: inherit;
+    height: auto;
+}
+
+.slide-heading {
+    font-size: 70px;
+    font-weight: 900;
+    color: #22564b;
+    text-transform: capitalize;
+}
+
+.slide-text {
+    font-size: 16px;
+    color: black;
+    margin: 20px 0 30px;
+}
+
+.btn-read-more {
+    width: 180px;
+    height: 50px;
+    background-color: #22564b;
+    border: 1px solid #22564b;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn-read-more:hover {
+    background-color: #2d8231;
+    border: 1px solid #2d8231;
+}
