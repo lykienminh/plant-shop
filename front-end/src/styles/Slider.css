@@ -1,5 +1,5 @@
 .carousel-caption {
-    width: 800px; 
+    width: 700px; 
     top: 50%; 
     bottom: auto; 
     text-align: left;
@@ -21,21 +21,24 @@
 }
 
 .slide-text {
+    width: 450px; 
     font-size: 16px;
     color: black;
     margin: 20px 0 30px;
 }
 
-.btn-read-more {
-    width: 180px;
+.btn-buy {
+    width: 150px;
     height: 50px;
     background-color: #22564b;
     border: 1px solid #22564b;
     border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
     color: white;
 }
 
-.btn-read-more:hover {
+.btn-buy:hover {
     background-color: #2d8231;
     border: 1px solid #2d8231;
 }

@@ -20,25 +20,28 @@ const Slider = () => {
             <Carousel.Item>
                 <Image src={require('../../images/plant-slider-1.png')} alt='first-slide' className='banner'/>
                 <Carousel.Caption className='carousel-caption'>
-                    <h2 className='slide-heading'>Everyone enjoy gardening</h2>
-                    <div className='slide-text'>Nulla vitae elit libero, a pharetra augue mollis interdum.</div>
-                    <Button className="btn-read-more" >Read more</Button>
+                    <h2 className='slide-heading'>Siêu sale 30.4 - 1.5</h2>
+                    <div className='slide-text'>Giảm giá <span style={{fontSize: '24px', color: 'red'}}>10% </span> 
+                        tất cả các loại cây cảnh khi mua sắm trực tiếp tại cửa hàng từ ngày 28.4 đến ngày 2.5</div>
+                    <Button className="btn-buy" >Mua ngay</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <Image src={require('../../images/plant-slider-1.png')} alt='second-slide' className='banner'/>
                 <Carousel.Caption className='carousel-caption'>
-                    <h2 className='slide-heading'>Everyone enjoy gardening</h2>
-                    <div className='slide-text'>Nulla vitae elit libero, a pharetra augue mollis interdum.</div>
-                    <Button className="btn-read-more" >Read more</Button>
+                    <h2 className='slide-heading'>Siêu sale 30.4 - 1.5</h2>
+                    <div className='slide-text'>Giảm giá <span style={{fontSize: '24px', color: 'red'}}>10% </span> 
+                        tất cả các loại cây cảnh khi mua sắm trực tiếp tại cửa hàng từ ngày 28.4 đến ngày 2.5</div>
+                    <Button className="btn-buy" >Mua ngay</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <Image src={require('../../images/plant-slider-1.png')} alt='third-slide' className='banner'/>
                 <Carousel.Caption className='carousel-caption'>
-                    <h2 className='slide-heading'>Everyone enjoy gardening</h2>
-                    <div className='slide-text'>Nulla vitae elit libero, a pharetra augue mollis interdum.</div>
-                    <Button className="btn-read-more" >Read more</Button>
+                    <h2 className='slide-heading'>Siêu sale 30.4 - 1.5</h2>
+                    <div className='slide-text'>Giảm giá <span style={{fontSize: '24px', color: 'red'}}>10% </span> 
+                        tất cả các loại cây cảnh khi mua sắm trực tiếp tại cửa hàng từ ngày 28.4 đến ngày 2.5</div>
+                    <Button className="btn-buy" >Mua ngay</Button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
