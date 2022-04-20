@@ -22,7 +22,7 @@
 
 .slide-text {
     width: 450px; 
-    font-size: 16px;
+    font-size: 18px;
     color: black;
     margin: 20px 0 30px;
 }
@@ -34,7 +34,7 @@
     border: 1px solid #22564b;
     border-radius: 50px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
 }
 
