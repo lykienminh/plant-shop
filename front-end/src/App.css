@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito-sans&display=swap');
 
 * {
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Nunito-sans', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

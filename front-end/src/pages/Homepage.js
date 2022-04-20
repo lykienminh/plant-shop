@@ -50,7 +50,7 @@ const Homepage = () => {
         {sortListItems.slice(0,4).map(item => (
           <Col className='best-sellers'>
             <Image src={item.image} className='product-img'/>
-            {/* <div className='product-type'>{item.type}</div> */}
+            <div className='product-type'>{item.type}</div>
             <div className='product-name'>{item.name}</div>
             <div className='product-price'>{item.price} VNĐ</div>
           </Col>

@@ -13,6 +13,7 @@
     margin-left: 10px;
     color: gray;
     font-size: 16px;
+    font-weight: 500;
 }
 
 .navbar {
@@ -21,7 +22,7 @@
 
 .nav-link {
     font-size: 17px;
-    font-weight: 800;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +48,7 @@
     width: 150px;
     height: 50px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     background-color: transparent;
     border: 1px solid #22564b;
     border-radius: 50px;
