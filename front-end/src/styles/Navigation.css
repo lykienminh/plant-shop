@@ -39,9 +39,13 @@
     width: auto;
 }
 
-.icon-cart {
+.icon-cart-fill {
     font-size: 24px;
     color: #22564b;
+}
+
+.icon-cart-fill:hover {
+    color: #6a961f;
 }
 
 .btn-login {
