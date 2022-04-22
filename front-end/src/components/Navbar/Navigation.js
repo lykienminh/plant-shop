@@ -4,7 +4,6 @@ import {
     Nav, 
     Container, 
     Image, 
-    NavDropdown, 
     Button 
 } from 'react-bootstrap';
 import { 
@@ -46,12 +45,12 @@ const Navigation = () => {
                 <Nav>
                     <Nav.Link href="/">Trang chủ</Nav.Link>
                     <Nav.Link href="/product">Sản phẩm</Nav.Link>
-                    <Nav.Link href="/services">Dịch vụ</Nav.Link>
+                    <Nav.Link href="/service">Dịch vụ</Nav.Link>
                     <Nav.Link href="/contact-us">Liên hệ</Nav.Link>
                 </Nav>
                 <Nav>
                     <Nav.Link href="/cart">
-                        <BsFillCartFill className='icon-cart'/>
+                        <BsFillCartFill className='icon-cart-fill'/>
                     </Nav.Link>
                     <Nav.Link href="/login">
                         <Button className="btn-login" variant="outline-success">Đăng nhập</Button>
