@@ -1,0 +1,269 @@
+.contact {
+    color: #777777;
+}
+.contact .head {
+    background-image: url('https://landscaping.vamtam.com/wp-content/uploads/2017/09/Header-shop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    margin-top: 0;
+    width: 100vw;
+    height: 60vh;
+}
+.contact .head h1 {
+    color: white;
+    padding-top: 25vh;
+    text-align: center;
+}
+
+.layout-type.left_map_iconblock_inline .dt-contact-iconblock-section:nth-child(1):nth-last-child(2), .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section:nth-child(1):nth-last-child(2), .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section:nth-child(2):nth-last-child(2) {
+    /* display: flex; */
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+}
+
+.layout-type.left_iconblock_form_inline .dt-contact-iconblock-section {
+    order: 2;
+}
+.layout-type.left_iconblock_form_inline > * {
+    flex: 1;
+}
+.layout-type > * {
+    padding: calc(.5*30px);
+    width: 100%;
+}
+.dt-contact-iconblock-section {
+    margin: 0;
+}
+.dt-sc-column.three-column {
+    grid-template-columns: repeat(3,1fr);
+}
+.dt-sc-column {
+    display: grid;
+    width: 100%;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    padding: 0;
+    grid-auto-flow: row dense;
+}
+ul {
+    list-style: disc;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    background: 0 0;
+    outline: 0;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.layout-type.left_iconblock_form_inline > *:nth-child(1):nth-last-child(2) .dt-contact-icon-block {
+    display: flex;
+    align-items: center;
+}
+.layout-type.left_iconblock_form_inline > *:nth-child(2):nth-last-child(2) .dt-contact-icon-block {
+    grid-column: 1/6;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+.li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    background: 0 0;
+    outline: 0;
+}
+
+.dt-contact-iconblock-section .dt-contact-icon-block .dt-contact-icon-content h4 {
+    color: #22564b;
+    margin-top: 15px;
+    transition: all .3s linear;
+}
+p:only-of-type {
+    margin-bottom: 0;
+}
+
+.dt-contact-icon-block .dt-contact-icon-content p a {
+    color: #777777;
+}
+
+b, strong {
+    font-weight: bolder;
+}
+.dt-contact-iconblock-section .dt-contact-icon-block .dt-contact-icon-image > i {
+    background: #22564b;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    position: relative; 
+    text-align: center;
+    margin-right: 20px;
+    width: 50px;
+    transition: all .3s linear;
+    border-radius: 50%;
+}
+.dt-contact-iconblock-section .dt-contact-icon-block {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e9e9e9;
+    border-color: #efefef;
+    padding: 25px;
+    transition: all .3s linear;
+    border-radius: 5px;
+    margin: 0 25px;
+    margin-top: 25px;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.contact-form-section {
+    padding: 25px;
+}
+
+button, .btn {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    float: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0 0;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    line-height: 1.8em;
+    border-radius: 40px;
+    padding: 13px 45px 13px 45px;
+    color: #ffffff;
+    background-color: #22564b;
+}
+
+h2 {
+    color: #22564b;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-family: "Readex Pro", sans-serif;;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 867px){
+    .layout-type.left_map_form_inline > *, .layout-type.left_iconblock_form_inline > * {
+        flex: auto;
+    }
+
+    /* .dt-sc-column.two-column, .dt-sc-column.three-column, .dt-sc-column.four-column, 
+    .dt-sc-column.five-column, .dt-sc-column.six-column, .dt-sc-column.seven-column, 
+    .dt-sc-column.eight-column, .dt-sc-column.nine-column, .dt-sc-column.ten-column, 
+    .dt-sc-column.eleven-column, .dt-sc-column.twelve-column {
+        grid-template-columns: repeat(1,1fr);
+    } */
+    
+    .layout-type.left_iconblock_form_inline > *:nth-child(1):nth-last-child(2) .dt-contact-icon-block {
+        grid-column: 1/6;
+        display: flex;
+        align-items: center;
+    }
+
+    .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section:nth-child(1):nth-last-child(2) .dt-contact-icon-block {
+        flex: 1 1 100%;
+    }
+}
+
+@media only screen and (max-width: 1199px){
+    .layout-type.left_map_iconblock_inline #map, .layout-type.left_iconblock_form_inline .contact-form-section {
+        flex-grow: 1;
+    }
+    .layout-type.left_map_iconblock_inline .dt-contact-iconblock-section:nth-child(1):nth-last-child(2), 
+    .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section:nth-child(1):nth-last-child(2), 
+    .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section:nth-child(2):nth-last-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+    }
+    .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section:nth-child(2):nth-last-child(2) .dt-contact-icon-block {
+        flex: 1 1 100%;
+    }
+}
+
+.layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section + .contact-form-section form.contact-form > input, .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section + .contact-form-section form.contact-form textarea#ContactFormMessage {
+    grid-column: 1/6;
+}
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=range], input[type=date], textarea, input.text, input[type=search] {
+    display: block;
+    margin: 0;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #e9e9e9;
+    border-radius: 40px;
+    background: rgba(0,0,0,0);
+    word-break: break-all;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    background: 0 0;
+    outline: 0;
+    overflow: visible;
+}
+
+/* .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section + .contact-form-section form.contact-form > input, .layout-type.left_iconblock_form_inline > .dt-contact-iconblock-section + .contact-form-section form.contact-form textarea#ContactFormMessage {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #efefef;
+} */
+
+.layout-type form.contact-form > * {
+    margin-bottom: 10px;
+}
+
+.label--hidden {
+    display: none;
+}
+
+.contact-form-section {
+    max-width: 700px;
+}
