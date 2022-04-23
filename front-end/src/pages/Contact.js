@@ -9,7 +9,8 @@ const Contact = () => {
     return (
         <div className='contact'>
             <div className='head'>
-                <h1>Contact</h1>
+                <h1>Liên hệ</h1>
+                <button className="btn-buy">Mua ngay</button>
             </div>
             <div className="layout-type left_iconblock_form_inline">
 
@@ -24,8 +25,8 @@ const Contact = () => {
                         </div>
 
                         <div class="dt-contact-icon-content">
-                            <h4>Phone</h4>
-                            <p><b>For Work: </b> 0965740920</p><b>Free Support Call: </b> 0965740920
+                            <h4>Liên hệ</h4>
+                            <p><b>Hợp tác: </b> 0965740920</p><b>Hỗ trợ: </b> 0965740920
                         </div>
                     </li>
 
@@ -57,8 +58,8 @@ const Contact = () => {
                         </div>
 
                         <div class="dt-contact-icon-content">
-                            <h4>Address</h4>
-                            <p> No: 268 Ly Thuong Kiet Street,<br></br>Dist.10, Ho Chi Minh City.</p>
+                            <h4>Địa chỉ</h4>
+                            <p> <b>Số: </b> 268 Lý Thường Kiệt,<br></br>Phường 14, Quận 10, TP.Hồ Chí Minh.</p>
                         </div>
                     </li>
 
@@ -67,20 +68,20 @@ const Contact = () => {
 
 
                 <div class="contact-form-section">
-                    <h2> Contact Form </h2>
-                    <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form">
+                    <h2> Thông tin phản hồi </h2>
+                    <form method="post" id="contact_form" className="contact-form">
                         <input type="hidden" name="form_type" value="contact"></input>
                         <input type="hidden" name="utf8" value="✓"></input>
                         <label for="ContactFormName" class="label--hidden">Name</label>
-                        <input type="text" id="ContactFormName" class="input-full" name="contact[name]" placeholder="Name" autocapitalize="words" value=""></input>
+                        <input type="text" id="ContactFormName" class="input-full" name="contact[name]" placeholder="Name" autocapitalize="words" ></input>
                         <label for="ContactFormEmail" class="label--hidden">Email</label>
-                        <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value=""></input>
+                        <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" ></input>
                         <label for="ContactFormPhone" class="label--hidden">Phone</label>
-                        <input type="tel" id="ContactFormPhone" class="input-full" name="contact[phone]" placeholder="Phone" pattern="[0-9\-]*" value=""></input>
+                        <input type="tel" id="ContactFormPhone" class="input-full" name="contact[phone]" placeholder="Phone" pattern="[0-9\-]*" ></input>
                         <label for="ContactFormMessage" class="label--hidden">Message</label>
                         <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]" placeholder="Message"></textarea>
                         <button type="submit" class="btn">
-                            Send
+                            Gửi     
                         </button>
                     </form>
                 </div>
