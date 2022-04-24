@@ -66,7 +66,7 @@ Frontend Team:
         <sub><b>Ngọc Quý</sub>
       </a>
       <br />
-      <a href="https://github.com/dannhh/plant-shop/issues?q=author%3Angocquy25">🌵</a>
+      <a href="https://github.com/dannhh/plant-shop/issues?q=author%3Angocquy25">🌿</a>
     </td>    
     <td align="center">
       <a href="https://github.com/KanNguyenKiet">
