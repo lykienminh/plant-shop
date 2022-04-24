@@ -16,6 +16,7 @@ const listItems = [
         price: 100000,
         image: item1_image,
         score: 3,
+        quantity: 2
     },
     {
         id: 2,
@@ -25,6 +26,7 @@ const listItems = [
         price: 120000,
         image: item2_image,
         score: 4,
+        quantity: 1
     },
     {
         id: 3,
@@ -34,6 +36,7 @@ const listItems = [
         price: 110000,
         image: item3_image,
         score: 4,
+        quantity: 0
     },
     {
         id: 4,
@@ -43,6 +46,7 @@ const listItems = [
         price: 150000,
         image: item4_image,
         score: 1,
+        quantity: 2
     },
     {
         id: 5,
@@ -52,6 +56,7 @@ const listItems = [
         price: 130000,
         image: item5_image,
         score: 3,
+        quantity: 1
     },
     {
         id: 6,
@@ -61,6 +66,7 @@ const listItems = [
         price: 70000,
         image: item6_image,
         score: 4,
+        quantity: 0
     },
     {
         id: 7,
@@ -70,6 +76,7 @@ const listItems = [
         price: 200000,
         image: item7_image,
         score: 3,
+        quantity: 0
     },
     {
         id: 8,
@@ -79,6 +86,7 @@ const listItems = [
         price: 210000,
         image: item8_image,
         score: 5,
+        quantity: 0
     },
 ]
 

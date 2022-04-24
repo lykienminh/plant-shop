@@ -8,6 +8,10 @@ import Product from './pages/Product';
 import Service from './pages/Service';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Cart from './pages/Cart';
+import Payment from './pages/Payment';
+import Success from './pages/Paysuccess';
 import ProductDetail from './pages/ProductDetail';
 
 function App() {
@@ -21,6 +25,10 @@ function App() {
         <Route path='/contact-us' element={<Contact/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/product/:id' element={<ProductDetail/>} />
+        <Route path='/signup' element={<Signup/>} />
+        <Route path='/cart' element={<Cart/>} />
+        <Route path='/payment' element={<Payment/>} />
+        <Route path='/success' element={<Success/>} />
       </Routes>
       <Footer />
     </Router>
