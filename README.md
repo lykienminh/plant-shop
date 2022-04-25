@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="front-end/src/images">
-    <img src="front-end/src/images/logo-1.png" alt="Logo" width="20%" height="20%">
+    <img src="front-end/src/images/plant-banner.jpg" alt="Logo" width="100%" height="100%">
   </a>
 
   <h3 align="center">🌱 Plant Shop 🌱</h3>
@@ -31,21 +31,20 @@ This web app is built to provide a satisfying shopping experience to our users.
 * [JavaScript] - Language for Frontend
 * [Python] - Language for Backend
 * [React] - UI library render
-* [React Bootstrap] - UI framework design
-* [JavaScript] - Language for Frontend
-* [Django] - Framework
+* [React-Bootstrap] - UI framework design
+* [Django] - BE Framework
 
 ### Installation & Development
 
 Requires [Node.js](https://nodejs.org/) to run.
 
-Install the dependencies and start the server.
+Install the dependencies.
 
 ```sh
 $ npm install
 ```
 
-Start.
+Start the server.
 ```sh
 $ npm start
 ```
@@ -67,7 +66,7 @@ Frontend Team:
         <sub><b>Ngọc Quý</sub>
       </a>
       <br />
-      <a href="https://github.com/dannhh/plant-shop/issues?q=author%3Angocquy25">🌵</a>
+      <a href="https://github.com/dannhh/plant-shop/issues?q=author%3Angocquy25">🌿</a>
     </td>    
     <td align="center">
       <a href="https://github.com/KanNguyenKiet">
