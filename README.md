@@ -34,7 +34,7 @@ This web app is built to provide a satisfying shopping experience to our users.
 * [React-Bootstrap] - UI framework design
 * [Django] - BE Framework
 
-### Installation & Development
+### Installation & Development Node.js
 
 Requires [Node.js](https://nodejs.org/) to run.
 
@@ -50,6 +50,34 @@ $ npm start
 ```
 
 App runs on port 3000
+
+### Installation & Development Django
+
+1/ Install Django
+
+$ pip install django
+
+2/ Create Virtual Environment (file create need in the same location with root (plant-shop) folder)
+
+$ py -m venv venv
+
+3/ Activate Virtual Environment (cd to root folder)
+
+$ venv\Scripts\activate
+
+4/ Go to back-end folder to run django server
+
+$ cd plant-shop/back-end/plant_shop_Backend
+
+5/ Migrate step 
+
+$ py manage.py migrate 
+
+6/ Run Django server (port 8000)
+
+$ py manage.py runserver
+
+**Note: Just allow from step 3 to 6 (skip step 5) when running server second time and beyond
 
 ## Contributors
 
