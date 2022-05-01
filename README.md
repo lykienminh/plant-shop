@@ -55,27 +55,39 @@ App runs on port 3000
 
 1/ Install Django
 
+```sh
 $ pip install django
+```
 
 2/ Create Virtual Environment (file create need in the same location with root (plant-shop) folder)
 
+```sh
 $ py -m venv venv
+```
 
 3/ Activate Virtual Environment (cd to root folder)
 
+```sh
 $ venv\Scripts\activate
+```
 
 4/ Go to back-end folder to run django server
 
+```sh
 $ cd plant-shop/back-end/plant_shop_Backend
+```
 
 5/ Migrate step 
 
-$ py manage.py migrate 
+```sh
+$ py manage.py migrate
+```
 
 6/ Run Django server (port 8000)
 
+```sh
 $ py manage.py runserver
+```
 
 **Note: Just allow from step 3 to 6 (skip step 5) when running server second time and beyond
 
