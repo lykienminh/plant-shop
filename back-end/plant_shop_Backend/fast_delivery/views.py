@@ -18,7 +18,7 @@ class DeliveryAPI(AbstractView):
         shop_id = '111768'
         
         # request input data
-        client_name = "Tan Chau"
+        client_name = request.POST['client_name']
         client_phone_number = "0986390396"
         client_address = "Điện Biên Phủ, TP Trà Vinh, Trà Vinh"
         client_district_id = 2091 #Thành phố Trà Vinh
@@ -31,10 +31,10 @@ class DeliveryAPI(AbstractView):
         service_id = 53320 #Bay
         payment_type_id = 2 
         required_note = "CHOXEMHANGKHONGTHU"
-        product_name = "Bonsai"
-        product_quantity = 2
-        product_price = 100000
-        product_weight = 2000
+        product_name = request.POST['product_name']
+        product_quantity = int(request.POST['product_quantity'])
+        product_price = int(request.POST['product_price'])
+        product_weight = int(request.POST['product_weight'])
 
         item_content = {
             "name": product_name,
