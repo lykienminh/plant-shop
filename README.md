@@ -94,10 +94,10 @@ $ py manage.py runserver
 ### Back-end API
 (*): required field
 
-1/ Fast delivery:
+1/ Fast delivery: (all POST)
 
 - Get product detail
-Request body:
+
 ```yaml
 {
   "order_code": <value> *
@@ -109,7 +109,7 @@ http://localhost:8000/delivery/get
 ```
 
 - Create product
-Request body:
+
 ```yaml
 {
   "client_name": <value>, *
@@ -124,7 +124,7 @@ http://localhost:8000/delivery/create
 ```
 
 - Update product
-Request body:
+
 ```yaml
 {
   "order_code": <value>, *
@@ -140,7 +140,7 @@ http://localhost:8000/delivery/update
 ```
 
 - Cancel product
-Request body:
+
 ```yaml
 {
   "order_code": <value> *
