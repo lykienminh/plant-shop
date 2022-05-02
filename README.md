@@ -91,6 +91,64 @@ $ py manage.py runserver
 
 **Note: Just allow from step 3 to 6 (skip step 5) when running server second time and beyond
 
+### Back-end API
+(*): required field
+
+1/ Fast delivery:
+
+- Get product detail
+Request body:
+
+{
+  "order_code": <value> *
+}
+
+```sh
+http://localhost:8000/delivery/get
+```
+
+- Create product
+Request body:
+
+{
+  "client_name": <value>, *
+  "product_name": <value>, *
+  "product_quantity": <value>, *
+  "product_price": <value>, *
+  "product_weight": <value> *
+}
+
+```sh
+http://localhost:8000/delivery/create
+```
+
+- Update product
+Request body:
+
+{
+  "order_code": <value>, *
+  "client_name": <value>,
+  "product_name": <value>,
+  "product_quantity": <value>,
+  "product_price": <value>,
+  "product_weight": <value>
+}
+
+```sh
+http://localhost:8000/delivery/update
+```
+
+- Cancel product
+Request body:
+
+{
+  "order_code": <value> *
+}
+
+```sh
+http://localhost:8000/delivery/cancel
+```
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
