@@ -98,10 +98,11 @@ $ py manage.py runserver
 
 - Get product detail
 Request body:
-
+```yaml
 {
   "order_code": <value> *
 }
+```
 
 ```sh
 http://localhost:8000/delivery/get
@@ -109,7 +110,7 @@ http://localhost:8000/delivery/get
 
 - Create product
 Request body:
-
+```yaml
 {
   "client_name": <value>, *
   "product_name": <value>, *
@@ -117,14 +118,14 @@ Request body:
   "product_price": <value>, *
   "product_weight": <value> *
 }
-
+```
 ```sh
 http://localhost:8000/delivery/create
 ```
 
 - Update product
 Request body:
-
+```yaml
 {
   "order_code": <value>, *
   "client_name": <value>,
@@ -133,18 +134,18 @@ Request body:
   "product_price": <value>,
   "product_weight": <value>
 }
-
+```
 ```sh
 http://localhost:8000/delivery/update
 ```
 
 - Cancel product
 Request body:
-
+```yaml
 {
   "order_code": <value> *
 }
-
+```
 ```sh
 http://localhost:8000/delivery/cancel
 ```
