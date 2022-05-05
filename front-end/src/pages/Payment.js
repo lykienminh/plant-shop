@@ -1,10 +1,12 @@
-import React, { useState, Image, Button } from 'react';
+import React, { useState, Image, Button, Redirect } from 'react';
 import '../styles/Payment.css';
 // import Modal from "react-modal";
 import { BsTrash } from "react-icons/bs";
 import listItems from "../components/listItems/listItems";
 const Payment = () => {
-    const CLONE_PRODUCTS = JSON.parse(JSON.stringify(listItems));
+    let product = localStorage.getItem('prods');
+
+    const CLONE_PRODUCTS = JSON.parse(JSON.stringify(eval(product)));
     const [products, setProducts] = React.useState(CLONE_PRODUCTS);
 
     function subtotalOrder() {
@@ -45,6 +47,15 @@ const Payment = () => {
             return i != index;
         });
         setProducts(filteredProduct);
+    }
+
+    function handlePayment() {
+        localStorage.setItem('price', parseInt(subtotalOrder() * 1.1));
+        localStorage.setItem('prods', JSON.stringify(listItems));
+    }
+
+    function handlePM(s) {
+        localStorage.setItem('paymethod', s);
     }
 
     return (
@@ -144,7 +155,7 @@ const Payment = () => {
                             alignItems: 'center'
                         }}
                     >
-                        <input type="radio" value="ghn" id="ghn" name="delivery-method" required />
+                        <input type="radio" value="ghn" id="ghn" name="delivery-method" defaultChecked  />
                         <img src={require('../images/ghn.png')} alt="ghn" className="method-img" />
                         <label for="ghn" className="opt">Giao hàng nhanh</label>
                     </div>
@@ -156,9 +167,9 @@ const Payment = () => {
                             alignItems: 'center'
                         }}
                     >
-                        <input type="radio" value="cash" id="cash" name="payment-method" required />
+                        <input type="radio" value="cash" id="cash" name="payment-method" defaultChecked  onChange={() => handlePM('Thanh toán trực tiếp')} />
                         <img src={require('../images/cash.jpg')} alt="cash" className="method-img" />
-                        <label for="cash" className="opt">Thanh toán khi nhận hàng</label>
+                        <label for="cash" className="opt" >Thanh toán khi nhận hàng</label>
                     </div>
                     <div
                         style={{
@@ -167,9 +178,9 @@ const Payment = () => {
                             alignItems: 'center'
                         }}
                     >
-                        <input type="radio" value="momo" id="momo" name="payment-method" required />
+                        <input type="radio" value="momo" id="momo" name="payment-method" required onChange={() => handlePM('momo')} />
                         <img src={require('../images/momo.png')} alt="momo" className="method-img" />
-                        <label for="momo" className="opt">Thanh toán bằng ví MoMo</label>
+                        <label for="momo" className="opt" >Thanh toán bằng ví MoMo</label>
                     </div>
                 </div>
                 <card className="payment-card">
@@ -183,7 +194,11 @@ const Payment = () => {
                         </h5>
                     </div>
                     <a href="./success">
-                        <button className='payment-btn' type="button">Thanh toán</button>
+                        <button className='payment-btn' type="button" onClick={() => handlePayment()}>Thanh toán</button>
+                    </a>
+
+                    <a href="./success">
+                        <button className='payment-btn' id='real-btn' type="button" hidden>Thanh toán</button>
                     </a>
                 </card>
             </form>
