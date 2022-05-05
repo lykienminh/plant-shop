@@ -5,7 +5,7 @@ import { Card, Button, Container, Form } from 'react-bootstrap';
 
 const Product = () => {
 	let cardItems = [];
-
+	
 	listItems.forEach(element => {
 		cardItems.push( 
 			<Card>

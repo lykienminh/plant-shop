@@ -1,14 +1,16 @@
-import React, { useState, Image, Button } from 'react';
+import React, { useState, Image, Button, Component } from 'react';
 import '../styles/Cart.css';
-// import Modal from "react-modal";
+import { DataContext } from '../components/listItems/listItems'
 import { BsTrash } from "react-icons/bs";
 import listItems from "../components/listItems/listItems"
+import useLocalStorage from "react-use-localstorage";
 
 const Cart = () => {
+    let product = localStorage.getItem('prods');
 
-    const CLONE_PRODUCTS = JSON.parse(JSON.stringify(listItems));
+    const CLONE_PRODUCTS = JSON.parse(JSON.stringify(eval(product)));
     const [products, setProducts] = React.useState(CLONE_PRODUCTS);
-
+    
     function subtotalOrder() {
         var total = 0;
         {
@@ -34,6 +36,7 @@ const Cart = () => {
             cloneProducts[index].quantity++
         }
         setProducts(cloneProducts);
+        localStorage.setItem('prods', JSON.stringify(cloneProducts));
     };
 
     function handleClick(index) {
@@ -43,10 +46,10 @@ const Cart = () => {
     }
 
     function removeProduct(index) {
-        const filteredProduct = products.filter((product, i) => {
-            return i != index;
-        });
-        setProducts(filteredProduct);
+        const cloneProducts = [...products]
+        cloneProducts[index].quantity = 0
+        setProducts(cloneProducts);
+        localStorage.setItem('prods', JSON.stringify(cloneProducts));
     }
 
     if (products.length === 0 || parseInt(subtotalOrder()) === 0) {

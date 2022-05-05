@@ -4,7 +4,9 @@ import '../styles/Cart.css';
 import { BsCheck2Circle } from "react-icons/bs";
 
 const Success = () => {
-
+    console.log(localStorage.getItem('paymethod'))
+    let p = localStorage.getItem('price');
+    let pm = localStorage.getItem('paymethod');
     return (
         <div
             style={{
@@ -28,14 +30,12 @@ const Success = () => {
             >
                 <div style={{ textAlign: 'left', width: '50%' }}>
                     <p>Phương thức thanh toán:</p>
-                    <p>Số điện thoại:</p>
                     <p>Tổng thanh toán:</p>
                     <p>Mã giao dịch:</p>
                 </div>
                 <div style={{ textAlign: 'right', width: '50%' }}>
-                    <p>momo</p>
-                    <p>0123456789</p>
-                    <p>300000đ</p>
+                    <p>{pm}</p>
+                    <p>{p}đ</p>
                     <p>12tz425g2</p>
                 </div>
             </div>
