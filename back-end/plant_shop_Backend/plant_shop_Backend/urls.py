@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('link_momo.urls')),
     path('', include('fast_delivery.urls')),
+    path('', include('send_mail.urls')),
 ]
