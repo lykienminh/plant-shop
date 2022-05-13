@@ -150,6 +150,19 @@ http://localhost:8000/delivery/update
 http://localhost:8000/delivery/cancel
 ```
 
+2/ Send mail: 
+
+```yaml
+{
+  "subject": <value> *,
+  "message": <value> *,
+  "receive_email": <value> *,
+}
+```
+
+```sh
+http://localhost:8000/mail/send
+```
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
