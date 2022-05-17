@@ -18,14 +18,14 @@ class MomoAPI(AbstractView):
         """
         """
         momo_url = 'https://test-payment.momo.vn/v2/gateway/api/create'
-        partnerCode = 'MOMO6PQL20220416'
-        accessKey = 'vQZBuqXFTtNMNnJK'
-        secretKey = 'Meku0fGZ3LrAhivlcXrBRx3xJQbs0xnU'
+        partnerCode = 'MOMODMR220220518'
+        accessKey = 'OCytAF6g5SmOi1in'
+        secretKey = 'Twn7YuYcQlcofki8Uv3c3NZNJUTX4oDs'
         requestId = str(uuid.uuid4())
-        amount = '1000'
+        amount = request.POST['amount']
         orderId = str(uuid.uuid4())
-        orderInfo = 'info'
-        redirectUrl = 'https://momo.vn'
+        orderInfo = request.POST['info']
+        redirectUrl = request.POST['redirect_url']
         ipnUrl = 'https://momo.vn'
         requestType = 'captureWallet'
         extraData = ''
