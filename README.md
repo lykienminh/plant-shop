@@ -94,6 +94,24 @@ $ py manage.py runserver
 ### Back-end API
 (*): required field
 
+0/ Momo: (all POST)
+
+- only one api
+
+```yaml
+{
+  "amount": vd "10500" - giá tiền
+  "info": thông tin về sản phẩm
+  "redirect_url": vd "https://www.google.com.vn/" - link của trang 'Thanh toán thành công', ở trang momo sau khi thanh toán xong sẽ back về đây
+}
+```
+
+Lấy trường "payUrl" trong response trả về, đây là một đường link, chuyển trang đến đường link này. Xem trang này: https://developers.momo.vn/v3/vi/docs/payment/onboarding/test-instructions/ để biết cách thanh toán.
+
+```sh
+http://localhost:8000/momo/test
+```
+
 1/ Fast delivery: (all POST)
 
 - Get product detail
