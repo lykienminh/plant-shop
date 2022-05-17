@@ -58,6 +58,5 @@ class MomoAPI(AbstractView):
         r = requests.post(momo_url, headers=headers, data=data)
 
         result = r.json()
-        print(result)
 
         return self.response_handler.handle(data={'payUrl': result['payUrl']})
