@@ -1,0 +1,63 @@
+/* * {
+    outline: 0;
+} */
+
+.login-body{
+    background-image: url('../images/bg_login.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center; 
+}
+
+.login-body .title {
+    margin-bottom: 50px;
+}
+
+.login-body input {
+    display: block;
+    margin: 1em 0;
+    padding: 1em;
+    width: 35em;
+    border-radius: 8px;
+    border-style: none;
+    border: 1px solid #e4e6e8;
+    transition: 0.1s ease;
+}
+
+.login-body input:hover {
+    border-color: #23593b;
+}
+
+.login-body button {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    border: 1px solid #e4e6e8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    width: fit-content;
+}
+
+.login-body button:hover {
+    background-color: #23593b;
+    color: white;
+}
+
+.login-body .forgetPass {
+    color: #23593b;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.login-body .forgetPass:hover {
+    color: #23593b;
+    text-decoration: underline;
+}
+
+.login-body .register {
+    color: black;
+}
+
+.login-body .register:hover {
+    color: #23593b;
+}

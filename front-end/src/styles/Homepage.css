@@ -173,6 +173,7 @@
 }
 
 .break-img {
+    width: 100%;
     -webkit-filter: brightness(70%);
     opacity: 0.9;
 }

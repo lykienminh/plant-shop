@@ -26,8 +26,7 @@ const Homepage = () => {
       <Slider/>
       <div className="home-section">
         <div className='section-header'>
-          <h1 className='section-name'>Danh mục đặc biệt tháng 4</h1>
-          <div className='section-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+          <h1 className='section-name'>Danh mục đặc biệt tháng 5</h1>
         </div>
         <div className='section-content'>
         {uniqueCategories.slice(0,3).map(item => (
@@ -48,7 +47,7 @@ const Homepage = () => {
       <div className="home-section">
         <div className='section-header'>
           <h1 className='section-name'>Sản phẩm bán chạy nhất</h1>
-          <div className='section-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+          {/* <div className='section-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div> */}
         </div>
         <div className='section-content'>
         {sortListItems.slice(0,4).map(item => (
@@ -71,7 +70,7 @@ const Homepage = () => {
       <div className="home-section">
         <div className='section-header'>
           <h1 className='section-name'>Dịch vụ</h1>
-          <div className='section-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+          {/* <div className='section-description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div> */}
         </div>
         <div className='section-content'>
         {listServices.map(item => (

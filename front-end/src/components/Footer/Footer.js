@@ -21,9 +21,9 @@ const Footer = () => {
             <Row className='footer-section-1'>
                 <Col className='footer-item'>
                     <Image src={require('../../images/logo-2.png')} alt='logo' className='footer-logo'/>
-                    <div className='footer-text'>Et netus et malesuada fames ac turpis egestas integer. 
+                    {/* <div className='footer-text'>Et netus et malesuada fames ac turpis egestas integer. 
                     Id neque aliquam vestibulum morbi. Volutpat est velit egestas dui id ornare. 
-                    Turpis massa</div>
+                    Turpis massa</div> */}
                 </Col>
                 <Col className='footer-item separate-line'>
                     <div className='footer-header'>Thông tin</div>

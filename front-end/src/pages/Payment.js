@@ -1,10 +1,12 @@
-import React, { useState, Image, Button, Redirect } from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import '../styles/Payment.css';
 // import Modal from "react-modal";
 import { BsTrash } from "react-icons/bs";
 import listItems from "../components/listItems/listItems";
 const Payment = () => {
     let product = localStorage.getItem('prods');
+    const [name, setName] = useState("")
 
     const CLONE_PRODUCTS = JSON.parse(JSON.stringify(eval(product)));
     const [products, setProducts] = React.useState(CLONE_PRODUCTS);
@@ -51,7 +53,33 @@ const Payment = () => {
 
     function handlePayment() {
         localStorage.setItem('price', parseInt(subtotalOrder() * 1.1));
-        localStorage.setItem('prods', JSON.stringify(listItems));
+        if (localStorage.getItem('paymethod') == "momo"){
+            console.log(localStorage.getItem('paymethod') == "momo")
+            for (var i = 0; i < products.length; i++){
+                console.log(products[i]['quantity'])
+                if (products[i]['quantity'] > 0){
+                    var data = new FormData();
+                    data.append("client_name", name);
+                    data.append("product_name", products[i]['name']);
+                    data.append("product_quantity", products[i]['quantity']);
+                    data.append("product_price", products[i]['price'] );
+                    data.append("product_weight", 0);
+                    axios({
+                        method: "post",
+                        url: "/delivery/create",
+                        data: data,
+                        headers: { "Content-Type": "multipart/form-data" },
+                    })
+                        .then(function (response) {
+                        console.log(response);
+                        })
+                        .catch(function (response) {
+                        console.log(response);
+                        });
+                    }
+            }
+        }
+        // localStorage.setItem('prods', JSON.stringify(listItems));
     }
 
     function handlePM(s) {
@@ -109,6 +137,7 @@ const Payment = () => {
                             placeholder="Họ và tên"
                             type="text"
                             name="fullname"
+                            onChange={e => setName(e.target.value)}
                             required
                         />
                         <label className="label">SĐT người nhận</label>
@@ -193,12 +222,12 @@ const Payment = () => {
                         <h5>TỔNG TIỀN: <span style={{ color: '#3d8e60', fontWeight: 'bold' }}>{parseInt(subtotalOrder() * 1.1)}đ</span>
                         </h5>
                     </div>
-                    <a href="./success">
+                    <a >
                         <button className='payment-btn' type="button" onClick={() => handlePayment()}>Thanh toán</button>
                     </a>
 
-                    <a href="./success">
-                        <button className='payment-btn' id='real-btn' type="button" hidden>Thanh toán</button>
+                    <a >
+                        <button className='payment-btn' id='real-btn' type="button" hidden onClick={() => handlePayment()}>Thanh toán</button>
                     </a>
                 </card>
             </form>

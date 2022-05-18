@@ -55,15 +55,15 @@ const ProductDetail = () => {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label item-attribute-label">Xuất xứ: </label>
                         <div class="col-sm-10">
-                            <input type='text' class="form-control-plaintext" value={itemDetail.xuatXu} />
+                            <input type='text' class="form-control-plaintext" value={itemDetail.xuatxu} />
                         </div>
                     </div>
-                    <div class="form-group row">
+                    {/* <div class="form-group row">
                         <label class="col-sm-2 col-form-label item-attribute-label">Số lượng: </label>
                         <div class="col-sm-10">
                             <input type='text' class="form-control-plaintext" value={itemDetail.type} />
                         </div>
-                    </div>
+                    </div> */}
                     <div style={{ height: '40px' }}></div>
                     <Button variant='success' onClick={() => addToCart(itemDetail.id)}>Thêm vào giỏ hàng</Button>
                 </div>
