@@ -38,7 +38,7 @@ const Contact = () => {
         
         data.append("subject", "Request from: " + name + " - " + phone);
         data.append("message", message);
-        data.append("receive_email", "dannh.cse@gmail.com");
+        data.append("receive_email", email);
         axios({
             method: "post",
             url: "/mail/send",

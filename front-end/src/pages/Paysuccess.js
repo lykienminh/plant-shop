@@ -1,12 +1,15 @@
-import React, { useState, Image, Button } from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import '../styles/Cart.css';
 // import Modal from "react-modal";
 import { BsCheck2Circle } from "react-icons/bs";
+import listItems from "../components/listItems/listItems";
 
 const Success = () => {
-    console.log(localStorage.getItem('paymethod'))
+    let product = localStorage.getItem('prods');
     let p = localStorage.getItem('price');
     let pm = localStorage.getItem('paymethod');
+    
     return (
         <div
             style={{
@@ -36,7 +39,7 @@ const Success = () => {
                 <div style={{ textAlign: 'right', width: '50%' }}>
                     <p>{pm}</p>
                     <p>{p}đ</p>
-                    <p>12tz425g2</p>
+                    <p>{localStorage.getItem('orderCode')}</p>
                 </div>
             </div>
 

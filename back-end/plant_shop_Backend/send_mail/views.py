@@ -24,8 +24,8 @@ class SendMailAPI(AbstractView):
         send_mail(
             subject=subject,
             message=message,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[receive_email],
+            from_email=receive_email,
+            recipient_list=[settings.EMAIL_HOST_USER],
         )
 
         return self.response_handler.handle(data='SUCCESS')
