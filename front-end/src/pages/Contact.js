@@ -1,19 +1,63 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import 'antd/dist/antd.min.css';
 import '../styles/Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import MessengerCustomerChat from 'react-messenger-customer-chat';
-import MapBox from '../components/Map/Map';
 import { Collapse } from 'antd';
 const { Panel } = Collapse;
 
 const Contact = () => {
+    const [name, setName] = useState("")
+	const [phone, setPhone] = useState("")
+    const [email, setEmail] = useState("")
+	const [message, setMessage] = useState("")
+
+
+	const handleChangeName = (e) => {
+        console.log(e.target.value)
+		setName(e.target.value)
+	}
+
+    const handleChangePhone = (e) => {
+		setPhone(e.target.value)
+	}
+
+    const handleChangeEmail = (e) => {
+		setEmail(e.target.value)
+	}
+
+    const handleChangeMessage = (e) => {
+        console.log(e.target.value)
+		setMessage(e.target.value)
+	}
+
+    const handleSubmit = (values) => {
+        console.log(values)
+		var data = new FormData();
+        
+        data.append("subject", "Request from: " + name + " - " + phone);
+        data.append("message", message);
+        data.append("receive_email", email);
+        axios({
+            method: "post",
+            url: "/mail/send",
+            data: data,
+            headers: { "Content-Type": "multipart/form-data" },
+          })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (response) {
+              console.log(response);
+            });
+	};
+
     return (
         <div className='contact'>
             <div className='head'>
                 <h1>Liên hệ</h1>
-                <button className="btn-buy">Mua ngay</button>
+                <button className="btn-buy" type="button">Liên hệ ngay</button>
             </div>
             <div className="layout-type left_iconblock_form_inline">
 
@@ -71,17 +115,17 @@ const Contact = () => {
                 <div className='contact-form-map'>
                     <div class="contact-form-section">
                         <h2> Thông tin phản hồi </h2>
-                        <form method="post" id="contact_form" className="contact-form">
+                        <form id="contact_form" className="contact-form" onSubmit={handleSubmit} >
                             <input type="hidden" name="form_type" value="contact"></input>
-                            <input type="hidden" name="utf8" value="✓"></input>
+                            <input type="hidden" name="utf8" value="✓" ></input>
                             <label for="ContactFormName" class="label--hidden">Name</label>
-                            <input type="text" id="ContactFormName" class="input-full" name="contact[name]" placeholder="Name" autocapitalize="words" ></input>
+                            <input type="text" id="ContactFormName" class="input-full" name="name" placeholder="Name" autocapitalize="words" onChange={e => setName(e.target.value)}></input>
                             <label for="ContactFormEmail" class="label--hidden">Email</label>
-                            <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" ></input>
+                            <input type="email" id="ContactFormEmail" class="input-full" name="email" placeholder="Email" autocorrect="off" autocapitalize="off" onChange={e => setEmail(e.target.value)}></input>
                             <label for="ContactFormPhone" class="label--hidden">Phone</label>
-                            <input type="tel" id="ContactFormPhone" class="input-full" name="contact[phone]" placeholder="Phone" pattern="[0-9\-]*" ></input>
+                            <input type="tel" id="ContactFormPhone" class="input-full" name="phone" placeholder="Phone" pattern="[0-9\-]*" onChange={e => setPhone(e.target.value)}></input>
                             <label for="ContactFormMessage" class="label--hidden">Message</label>
-                            <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]" placeholder="Message"></textarea>
+                            <textarea rows="10" id="ContactFormMessage" class="input-full" name="body" placeholder="Message" onChange={e => setMessage(e.target.value)}></textarea>
                             <button type="submit" class="btn">
                                 Gửi
                             </button>

@@ -52,9 +52,9 @@ const Navigation = () => {
                     <Nav.Link href="/cart">
                         <BsFillCartFill className='icon-cart-fill'/>
                     </Nav.Link>
-                    <Nav.Link href="/login">
+                    {/* <Nav.Link href="/login">
                         <Button className="btn-login" variant="outline-success">Đăng nhập</Button>
-                    </Nav.Link>
+                    </Nav.Link> */}
                 </Nav>
             </Container>
         </Navbar>
