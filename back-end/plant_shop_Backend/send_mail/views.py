@@ -19,12 +19,11 @@ class SendMailAPI(AbstractView):
         # request input data
         subject = request.POST['subject']
         message = request.POST['message']
-        receive_email = request.POST['receive_email']
 
         send_mail(
             subject=subject,
             message=message,
-            from_email=receive_email,
+            from_email=settings.EMAIL_HOST_USER,
             recipient_list=[settings.EMAIL_HOST_USER],
         )
 
