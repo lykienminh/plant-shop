@@ -58,6 +58,7 @@ class DeliveryAPI(AbstractView):
             'payment_type_id' : payment_type_id,
             'required_note' : required_note,
             'items': [item_content],
+            'cod_amount': product_price,
         }
 
         data = json.dumps(data)
