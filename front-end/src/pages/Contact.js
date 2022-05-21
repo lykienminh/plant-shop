@@ -36,9 +36,8 @@ const Contact = () => {
         console.log(values)
 		var data = new FormData();
         
-        data.append("subject", "Request from: " + name + " - " + phone);
+        data.append("subject", "Request from: " + name + " - " + phone + " - " + email);
         data.append("message", message);
-        data.append("receive_email", email);
         axios({
             method: "post",
             url: "/mail/send",
