@@ -1,0 +1,89 @@
+:root {
+    --Main_Theme_Color: #22564b;
+    --DTGutter_Width: 30px;
+    --DTContainer: 1460px;
+    --DT_Lap_Container: 1250px;
+}
+
+.service {
+    color: #777777;
+}
+.service .head {
+    background-image: url('https://cdn.shopify.com/s/files/1/0560/7145/4754/files/testimonial-bg.jpg?v=1643709033');
+    background-size: cover;
+    background-position: center;
+
+    padding: 90px 0;
+    float: left;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    margin: 0 0 80px;
+}
+
+.service .head:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: #6a961f;
+    opacity: .6;
+}
+
+.service .text-center, .service .text-center>* {
+    text-align: center;
+    justify-content: center;
+}
+
+.service .head .container {
+    max-width: var(--DT_Lap_Container);
+    margin: auto;
+    padding-left: calc(var(--DTGutter_Width) / 2);
+    padding-right: calc(var(--DTGutter_Width) / 2);
+    width: var(--DTContainer);
+}
+
+.service .head .container .title {
+    margin: 0 0 15px;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    /* font-size: 2.25em; */
+    /* color: #fff; */
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--Main_Theme_Color);
+}
+
+.head a, .head span {
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 2px;
+    margin-right: 2px;
+    /* font-size: 1em; */
+    font-size: 20px;
+    color: #fff;
+}
+
+.service .head .container a:hover {
+    color: #fff;
+    color: var(--Main_Theme_Color);
+}
+
+.service .body {
+    margin: 0 0 80px;
+}
+
+.service .body .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
