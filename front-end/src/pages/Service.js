@@ -26,6 +26,7 @@ const Service = () => {
       <div className='head text-center'>
           <div className='container'>
             <h1 className='title'>Dịch vụ{' '}</h1>
+            <h1 className='title'>{process.env.REACT_APP_API_URL }</h1>
             <a href="/" title="Back to the frontpage">Trang chủ</a>
             <span aria-hidden="true">/</span>
             <span>Dịch vụ</span>
