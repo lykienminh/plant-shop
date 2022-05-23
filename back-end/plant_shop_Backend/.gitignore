@@ -19,6 +19,7 @@ front-end/node_modules
 back-end/
 back-end/venv
 venv/
+node_modules/
 # production
 front-end/build
 
