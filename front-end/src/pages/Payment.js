@@ -72,10 +72,10 @@ const Payment = () => {
             console.log(parseInt(subtotalOrder() * 1.1))
             data.append("amount", parseInt(subtotalOrder() * 1.1));
             data.append("info", info);
-            data.append("redirect_url", "http://localhost:3000");
+            data.append("redirect_url", `${process.env.REACT_APP_API_URL}`);
             axios({
                 method: "post",
-                url: "/momo/test",
+                url: `${process.env.REACT_APP_API_URL}/momo/test`,
                 data: data,
                 headers: { "Content-Type": "multipart/form-data" },
             })
@@ -100,7 +100,7 @@ const Payment = () => {
                         console.log(data)
                         axios({
                             method: "post",
-                            url: "/delivery/create",
+                            url: `${process.env.REACT_APP_API_URL}/delivery/create`,
                             data: data,
                             headers: { "Content-Type": "multipart/form-data" },
                         })

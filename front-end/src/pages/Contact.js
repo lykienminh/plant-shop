@@ -40,7 +40,7 @@ const Contact = () => {
         data.append("message", message);
         axios({
             method: "post",
-            url: "/mail/send",
+            url: `${process.env.REACT_APP_API_URL}/mail/send`,
             data: data,
             headers: { "Content-Type": "multipart/form-data" },
           })

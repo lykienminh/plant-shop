@@ -43,7 +43,7 @@ const Homepage = () => {
                             data.append("product_weight", 0);
                             axios({
                                 method: "post",
-                                url: "/delivery/create",
+                                url: `${process.env.REACT_APP_API_URL}/delivery/create`,
                                 data: data,
                                 headers: { "Content-Type": "multipart/form-data" },
                             })
