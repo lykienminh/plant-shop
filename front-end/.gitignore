@@ -2,6 +2,8 @@
 
 # dependencies
 front-end/node_modules
+back-end/
+front-end/
 
 # production
 front-end/build
