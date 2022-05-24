@@ -72,7 +72,7 @@ const Payment = () => {
             console.log(parseInt(subtotalOrder() * 1.1))
             data.append("amount", parseInt(subtotalOrder() * 1.1));
             data.append("info", info);
-            data.append("redirect_url", `${process.env.REACT_APP_API_URL}`);
+            data.append("redirect_url", `${process.env.REACT_APP_WEB_URL}`);
             axios({
                 method: "post",
                 url: `${process.env.REACT_APP_API_URL}/momo/test`,
