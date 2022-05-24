@@ -41,6 +41,12 @@ const Homepage = () => {
                             data.append("product_quantity", products[i]['quantity']);
                             data.append("product_price", products[i]['price']);
                             data.append("product_weight", 0);
+
+                            console.log("==============CALL API================")
+                            console.log("url", `${process.env.REACT_APP_API_URL}/delivery/create`)
+                            console.log("data", data)
+                            console.log("==============API END================")
+                        
                             axios({
                                 method: "post",
                                 url: `${process.env.REACT_APP_API_URL}/delivery/create`,

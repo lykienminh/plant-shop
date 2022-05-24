@@ -38,6 +38,12 @@ const Contact = () => {
         
         data.append("subject", "Request from: " + name + " - " + phone + " - " + email);
         data.append("message", message);
+
+        console.log("==============CALL API================")
+        console.log("url", `${process.env.REACT_APP_API_URL}/mail/send`)
+        console.log("data", data)
+        console.log("==============API END================")
+        
         axios({
             method: "post",
             url: `${process.env.REACT_APP_API_URL}/mail/send`,

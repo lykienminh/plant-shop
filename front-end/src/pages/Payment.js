@@ -73,6 +73,12 @@ const Payment = () => {
             data.append("amount", parseInt(subtotalOrder() * 1.1));
             data.append("info", info);
             data.append("redirect_url", `${process.env.REACT_APP_WEB_URL}`);
+        
+            console.log("==============CALL API================")
+            console.log("url", `${process.env.REACT_APP_API_URL}/momo/test`)
+            console.log("data", data)
+            console.log("==============API END================")
+
             axios({
                 method: "post",
                 url: `${process.env.REACT_APP_API_URL}/momo/test`,
@@ -97,7 +103,12 @@ const Payment = () => {
                         data.append("product_quantity", products[i]['quantity']);
                         data.append("product_price", products[i]['price'] );
                         data.append("product_weight", 0);
-                        console.log(data)
+                        
+                        console.log("==============CALL API================")
+                        console.log("url", `${process.env.REACT_APP_API_URL}/delivery/create`)
+                        console.log("data", data)
+                        console.log("==============API END================")
+
                         axios({
                             method: "post",
                             url: `${process.env.REACT_APP_API_URL}/delivery/create`,
