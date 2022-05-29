@@ -4,6 +4,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import ReactGA from 'react-ga';
+
+const TRACKING_ID = "UA-204271508-1";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.set({ page: window.location.pathname, n: 'mimi' });
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

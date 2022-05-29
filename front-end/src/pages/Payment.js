@@ -4,6 +4,7 @@ import '../styles/Payment.css';
 // import Modal from "react-modal";
 import { BsTrash } from "react-icons/bs";
 import listItems from "../components/listItems/listItems";
+import ReactGA from 'react-ga';
 const Payment = () => {
     let product = localStorage.getItem('prods');
     const [name, setName] = useState("")
@@ -79,6 +80,11 @@ const Payment = () => {
             console.log("data", data)
             console.log("==============API END================")
 
+            ReactGA.event({
+                category: 'Payment',
+                action: 'Payment with MOMO'
+            });
+
             axios({
                 method: "post",
                 url: `${process.env.REACT_APP_API_URL}/momo/test`,
@@ -108,6 +114,11 @@ const Payment = () => {
                         console.log("url", `${process.env.REACT_APP_API_URL}/delivery/create`)
                         console.log("data", data)
                         console.log("==============API END================")
+
+                        ReactGA.event({
+                            category: 'Payment',
+                            action: 'Payment with COD'
+                        });
 
                         axios({
                             method: "post",
