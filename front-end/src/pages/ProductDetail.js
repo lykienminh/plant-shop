@@ -4,6 +4,7 @@ import listItems from '../components/listItems/listItems';
 import { useParams } from 'react-router-dom';
 import { Button, Container, Image } from 'react-bootstrap';
 import useLocalStorage from "react-use-localstorage";
+import ReactGA from 'react-ga';
 
 const ProductDetail = () => {
     let { id } = useParams();
@@ -13,6 +14,11 @@ const ProductDetail = () => {
     function addToCart(index) {
         itemDetail.quantity++;
         let temp = localStorage.getItem("prods");
+        ReactGA.event({
+            category: 'Add Product',
+            action: itemDetail?.name,
+        });
+        console.log(itemDetail?.name)
         if (!temp) {
             localStorage.setItem("prods", JSON.stringify(listItems));
         }
