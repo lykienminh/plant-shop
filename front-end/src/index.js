@@ -8,7 +8,7 @@ import ReactGA from 'react-ga';
 
 const TRACKING_ID = "UA-204271508-1";
 ReactGA.initialize(TRACKING_ID);
-ReactGA.set({ page: window.location.pathname, n: 'mimi' });
+ReactGA.set({ page: window.location.pathname });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
