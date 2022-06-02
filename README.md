@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="front-end/src/images">
-    <img src="front-end/src/images/plant-banner.jpg" alt="Logo" width="100%" height="100%">
+    <img src="front-end/src/images/plant-banner-2.png" alt="Logo" width="100%" height="100%">
   </a>
 
   <h3 align="center">🌱 Plant Shop 🌱</h3>
@@ -13,9 +13,9 @@
 <!--     <a href="https://github.com/dannhh/plant-shop"><strong>Explore the docs »</strong></a> -->
 <!--     <br /> -->
     <br />
-    <a href="">View Demo</a>
+    <a href="https://plant-shop-hcmut.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/dannhh/plant-shop/issues">Report Bug</a>
+    <a href="https://github.com/lykienminh/plant-shop/issues">Report Bug</a>
   </p>
 </div>
 
